@@ -1,0 +1,2188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taboola × Bhanu Kumar | Product Marketing Blueprint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --taboola-blue: #0056f0;
+      --taboola-blue-hover: #0043c2;
+      --dark-navy: #002852;
+      --dark-navy-deep: #001a36;
+      --turquoise: #00f0d2;
+      --purple: #bb61ff;
+      --yellow: #f2ff4a;
+      --light-blue: #7bcdff;
+      --slate-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-light: #64748b;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --shadow-sm: 0 1px 3px rgba(0,40,82,0.06);
+      --shadow-md: 0 8px 24px -4px rgba(0,40,82,0.08);
+      --shadow-lg: 0 20px 40px -8px rgba(0,40,82,0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--slate-bg);
+      color: var(--text-main);
+      line-height: 1.65;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Fixed Top Header */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 12px 32px;
+    }
+
+    .header-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-logo-text {
+      font-size: 23px;
+      font-weight: 800;
+      color: var(--taboola-blue);
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: baseline;
+    }
+
+    .brand-logo-text span {
+      color: var(--dark-navy);
+      font-size: 13.5px;
+      font-weight: 600;
+      margin-left: 8px;
+      padding-left: 8px;
+      border-left: 1px solid var(--border-strong);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .nav-link {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--taboola-blue);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-discuss {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--dark-navy);
+      color: #ffffff;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-discuss:hover {
+      background: var(--taboola-blue);
+      box-shadow: 0 4px 12px rgba(0, 86, 240, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .btn-discuss svg {
+      transition: transform 0.2s ease;
+    }
+
+    .btn-discuss:hover svg {
+      transform: translateY(2px);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 44px 0 24px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      background: linear-gradient(180deg, #ffffff 0%, var(--slate-bg) 100%);
+    }
+
+    .hero-meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 14px;
+      background: rgba(0, 86, 240, 0.08);
+      color: var(--taboola-blue);
+      border: 1px solid rgba(0, 86, 240, 0.18);
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .hero-meta-badge .status-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--turquoise);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--turquoise);
+    }
+
+    .hero-title {
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1.18;
+      letter-spacing: -0.8px;
+      color: var(--dark-navy);
+      max-width: 960px;
+      margin-bottom: 14px;
+    }
+
+    .hero-title .highlight {
+      color: var(--taboola-blue);
+    }
+
+    .hero-subtitle {
+      font-size: 16.5px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      max-width: 860px;
+      margin-bottom: 24px;
+    }
+
+    /* Clean Streamlined KPI Strip */
+    .hero-kpis {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .kpi-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .kpi-num {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--dark-navy);
+      line-height: 1.1;
+      margin-bottom: 3px;
+    }
+
+    .kpi-num span {
+      color: var(--taboola-blue);
+      font-size: 18px;
+    }
+
+    .kpi-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .kpi-sub {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-top: 3px;
+      line-height: 1.4;
+    }
+
+    /* Streamlined Illustrative Workbench Hero */
+    .workbench-container {
+      background: var(--dark-navy);
+      border-radius: var(--radius-lg);
+      border: 1px solid #1e3a63;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      margin-bottom: 24px;
+      color: #ffffff;
+      position: relative;
+    }
+
+    .workbench-header {
+      background: var(--dark-navy-deep);
+      padding: 14px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .workbench-branding {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .terminal-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .dot-red { background: #ff5f56; }
+    .dot-yellow { background: #ffbd2e; }
+    .dot-green { background: #27c93f; }
+
+    .workbench-title-tag {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--light-blue);
+      background: rgba(123, 205, 255, 0.12);
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(123, 205, 255, 0.2);
+    }
+
+    .workbench-disclaimer {
+      font-size: 12px;
+      color: #94a3b8;
+      font-style: italic;
+    }
+
+    /* Interactive Status Badge */
+    .live-optimizer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(0, 240, 210, 0.1);
+      border: 1px solid rgba(0, 240, 210, 0.25);
+      color: var(--turquoise);
+      font-size: 11.5px;
+      font-weight: 600;
+    }
+
+    .live-optimizer-badge .pulse-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--turquoise);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--turquoise);
+      animation: dotPulse 1.5s infinite;
+    }
+
+    @keyframes dotPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    /* Cleaner 3-Column Workbench Body */
+    .workbench-body {
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 350px 1fr 340px;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    /* Column 1 */
+    .wb-panel {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .panel-heading {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--light-blue);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .badge-mini {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 600;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .badge-abby {
+      background: rgba(187, 97, 255, 0.2);
+      color: var(--purple);
+      border: 1px solid rgba(187, 97, 255, 0.4);
+    }
+
+    .prompt-bubble {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #e2e8f0;
+      position: relative;
+    }
+
+    .prompt-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--turquoise);
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .wb-control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+    }
+
+    /* Tooltip Callout Animation that guides users to interact */
+    .interactive-guide-pill {
+      font-size: 10.5px;
+      color: var(--turquoise);
+      background: rgba(0, 240, 210, 0.12);
+      border: 1px solid rgba(0, 240, 210, 0.3);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .wb-label {
+      font-size: 12.5px;
+      color: #94a3b8;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 500;
+      gap: 8px;
+    }
+
+    .wb-label span.label-name {
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .wb-label span.val {
+      color: var(--turquoise);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .wb-slider {
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: #1e3a63;
+      outline: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .wb-slider:hover {
+      background: #254b7d;
+    }
+
+    .wb-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--turquoise);
+      cursor: pointer;
+      box-shadow: 0 0 10px var(--turquoise);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .wb-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 14px var(--turquoise);
+    }
+
+    /* Slider Pulse Glow for Initial Discovery */
+    @keyframes sliderPulse {
+      0%, 100% { box-shadow: 0 0 8px rgba(0, 240, 210, 0.6); }
+      50% { box-shadow: 0 0 18px 4px rgba(0, 240, 210, 0.9); }
+    }
+
+    .wb-slider.highlight-slider::-webkit-slider-thumb {
+      animation: sliderPulse 1.2s infinite;
+    }
+
+    /* Streamlined Brand Safety Strip */
+    .policy-gate-card {
+      margin-top: auto;
+      background: rgba(0, 240, 210, 0.05);
+      border: 1px solid rgba(0, 240, 210, 0.2);
+      border-radius: 8px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #cbd5e1;
+    }
+
+    .policy-gate-card .badge-safe {
+      font-weight: 700;
+      color: var(--turquoise);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Column 2: Center Canvas with Ripple Supply Activation */
+    .wb-canvas {
+      background: #001e3d;
+      border: 1px solid #1e3a63;
+      border-radius: var(--radius-md);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+    }
+
+    .canvas-network-map {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .network-nodes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .network-node {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 10px 12px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .network-node:hover {
+      border-color: rgba(0, 240, 210, 0.4);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .network-node.active-node {
+      border-color: var(--turquoise);
+      background: rgba(0, 240, 210, 0.08);
+      box-shadow: 0 0 12px rgba(0, 240, 210, 0.15);
+    }
+
+    /* Ripple Animation when nodes light up */
+    @keyframes nodeRipple {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 240, 210, 0.7); }
+      50% { transform: scale(1.03); box-shadow: 0 0 16px 4px rgba(0, 240, 210, 0.3); }
+      100% { transform: scale(1); box-shadow: 0 0 10px rgba(0, 240, 210, 0.15); }
+    }
+
+    .network-node.ripple-active {
+      animation: nodeRipple 0.8s ease;
+    }
+
+    .node-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .node-sub {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 3px;
+    }
+
+    .node-badge {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--turquoise);
+      font-family: 'JetBrains Mono', monospace;
+      margin-top: 4px;
+      transition: color 0.2s ease;
+    }
+
+    /* Column 3: Outcome Layer */
+    .wb-telemetry {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .telemetry-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 14px 16px;
+      transition: border-color 0.25s ease;
+    }
+
+    .telemetry-val {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .telemetry-val .pill {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(0, 240, 210, 0.15);
+      color: var(--turquoise);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .telemetry-desc {
+      font-size: 12.5px;
+      color: #94a3b8;
+      line-height: 1.45;
+    }
+
+    /* Section Global Headers */
+    .section-wrap {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-pill {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--taboola-blue);
+      background: rgba(0, 86, 240, 0.08);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 27px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--dark-navy);
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .section-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 820px;
+      margin-bottom: 28px;
+    }
+
+    /* Grid Layouts */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
+    }
+
+    /* Domain Mapping Cards */
+    .domain-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .domain-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .domain-header {
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 12px;
+    }
+
+    .domain-tag {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .domain-title {
+      font-size: 17.5px;
+      font-weight: 700;
+      color: var(--dark-navy);
+      line-height: 1.35;
+    }
+
+    .domain-step {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      font-size: 13.5px;
+    }
+
+    .domain-step-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-light);
+    }
+
+    .domain-step-content {
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    /* Positioning Diff Section */
+    .diff-container {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .diff-nav {
+      display: flex;
+      border-bottom: 1px solid var(--border-subtle);
+      background: var(--slate-bg);
+    }
+
+    .diff-nav-btn {
+      flex: 1;
+      padding: 13px 18px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+      border-bottom: 2px solid transparent;
+    }
+
+    .diff-nav-btn:hover {
+      color: var(--dark-navy);
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .diff-nav-btn.active {
+      background: #ffffff;
+      color: var(--taboola-blue);
+      border-bottom: 2px solid var(--taboola-blue);
+    }
+
+    .diff-pane {
+      display: none;
+      padding: 26px;
+    }
+
+    .diff-pane.active {
+      display: block;
+    }
+
+    .diff-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .diff-box {
+      border-radius: var(--radius-md);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .diff-box-legacy {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+    }
+
+    .diff-box-modern {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+    }
+
+    .diff-header-pill {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    .diff-pill-legacy {
+      background: #e2e8f0;
+      color: var(--text-muted);
+    }
+
+    .diff-pill-modern {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .diff-headline {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--dark-navy);
+    }
+
+    .diff-body {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .diff-rationale {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed rgba(0, 0, 0, 0.1);
+      font-size: 12.5px;
+      color: var(--text-main);
+    }
+
+    /* Battlecards */
+    .battlecard-item {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .battlecard-header {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      background: #ffffff;
+      transition: background 0.15s ease;
+    }
+
+    .battlecard-header:hover {
+      background: var(--slate-bg);
+    }
+
+    .battlecard-query {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--dark-navy);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .battlecard-chevron {
+      color: var(--taboola-blue);
+      font-size: 18px;
+      font-weight: 800;
+      transition: transform 0.2s ease;
+    }
+
+    .battlecard-item.open .battlecard-chevron {
+      transform: rotate(180deg);
+    }
+
+    .battlecard-content {
+      display: none;
+      padding: 18px 20px;
+      background: #fafcff;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .battlecard-item.open .battlecard-content {
+      display: block;
+    }
+
+    .playbook-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .playbook-step {
+      background: #ffffff;
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .step-tag {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+
+    .tag-concede { color: #dc2626; }
+    .tag-reframe { color: #0284c7; }
+    .tag-proof { color: #16a34a; }
+
+    .step-body {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Supporting Evidence Section styling */
+    .evidence-section {
+      background: #f1f5f9;
+      padding: 48px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    /* 30-60-90 Day Roadmap */
+    .roadmap-timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .roadmap-column {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-top: 4px solid var(--taboola-blue);
+    }
+
+    .roadmap-col-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .roadmap-days {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--taboola-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .roadmap-focus {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark-navy);
+      line-height: 1.3;
+    }
+
+    .roadmap-deliverables {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .deliverable-item {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.45;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .deliverable-item svg {
+      color: var(--taboola-blue);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .roadmap-metric {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--dark-navy);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Case Studies */
+    .case-studies-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .case-study-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .case-study-card:hover {
+      border-color: var(--taboola-blue);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .case-company {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--dark-navy);
+    }
+
+    .case-domain {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--taboola-blue);
+      margin-top: 2px;
+    }
+
+    .case-problem {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .case-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--taboola-blue);
+      text-decoration: none;
+    }
+
+    .case-link:hover {
+      color: var(--taboola-blue-hover);
+    }
+
+    /* Audit Grid */
+    .audit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 22px;
+    }
+
+    .audit-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .audit-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: var(--dark-navy);
+      color: #ffffff;
+      padding: 56px 0 36px 0;
+      border-top: 1px solid #1e3a63;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .footer-sub {
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    .footer-trinity {
+      display: flex;
+      gap: 12px;
+      padding: 6px;
+      border-radius: 999px;
+      transition: all 0.3s ease;
+    }
+
+    /* Highlight Pulse Glow Animation: 4 Repetitions */
+    @keyframes trinityGlow {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 240, 210, 0.85);
+        background: rgba(0, 240, 210, 0.15);
+      }
+      50% {
+        box-shadow: 0 0 28px 10px rgba(0, 240, 210, 0.45);
+        background: rgba(0, 240, 210, 0.3);
+        transform: scale(1.05);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 240, 210, 0);
+        background: transparent;
+        transform: scale(1);
+      }
+    }
+
+    .footer-trinity.highlight-pulse {
+      animation: trinityGlow 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 4;
+    }
+
+    .btn-contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-contact-outline {
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      background: transparent;
+    }
+
+    .btn-contact-outline:hover {
+      border-color: var(--turquoise);
+      color: var(--turquoise);
+      background: rgba(0, 240, 210, 0.08);
+    }
+
+    .btn-contact-solid {
+      background: var(--taboola-blue);
+      color: #ffffff;
+      border: 1px solid transparent;
+    }
+
+    .btn-contact-solid:hover {
+      background: var(--taboola-blue-hover);
+      box-shadow: 0 4px 12px rgba(0, 86, 240, 0.25);
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+      font-size: 12.5px;
+      color: #64748b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (max-width: 1024px) {
+      .workbench-body {
+        grid-template-columns: 1fr;
+      }
+      .hero-kpis {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .roadmap-timeline {
+        grid-template-columns: 1fr;
+      }
+      .playbook-steps {
+        grid-template-columns: 1fr;
+      }
+      .case-studies-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 30px;
+      }
+      .header-nav {
+        display: none;
+      }
+      .hero-kpis {
+        grid-template-columns: 1fr;
+      }
+      .diff-split {
+        grid-template-columns: 1fr;
+      }
+      .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .audit-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Clean Navigation Bar -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand-mark">
+        <div class="brand-logo-text">Taboola <span>PMM Blueprint</span></div>
+      </a>
+      <nav class="header-nav">
+        <a href="#workbench" class="nav-link">Workflow Demo</a>
+        <a href="#domains" class="nav-link">Domain Alignment</a>
+        <a href="#positioning" class="nav-link">Narrative Pivot</a>
+        <a href="#objections" class="nav-link">Sales Battlecards</a>
+        <a href="#evidence" class="nav-link" style="color: var(--text-light);">Roadmap & Evidence &darr;</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-discuss" onclick="handleConnectClick()">
+          Connect
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-meta-badge">
+        <span class="status-dot"></span>
+        Taboola Advertisers × Bhanu Kumar · Product Marketing Blueprint
+      </div>
+      <h1 class="hero-title">
+        Positioning <span class="highlight">Realize+</span> as the Performance Layer Beyond Search & Social
+      </h1>
+      <p class="hero-subtitle">
+        An independent PMM blueprint for turning Taboola's AI, exclusive supply, and open-web intent into clearer advertiser narratives and sales enablement across the advertiser journey.
+      </p>
+
+      <!-- KPI Metrics Strip (Integrated with Product Hierarchy Pills) -->
+      <div class="hero-kpis">
+        <div class="kpi-card">
+          <div class="kpi-num">600M<span>+</span></div>
+          <div class="kpi-label">Daily Active Users</div>
+          <div class="kpi-sub">
+            Audience scale across premium publishers and device OEMs.
+            <div style="margin-top: 6px;"><span style="font-size: 11px; font-weight: 700; color: var(--taboola-blue); background: #e0edff; padding: 2px 6px; border-radius: 4px;">Realize: Ad Platform</span></div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num">75<span>%</span></div>
+          <div class="kpi-label">Faster Setup</div>
+          <div class="kpi-sub">
+            Reported reduction in campaign creation time with Abby GenAI.
+            <div style="margin-top: 6px;"><span style="font-size: 11px; font-weight: 700; color: #9333ea; background: #f3e8ff; padding: 2px 6px; border-radius: 4px;">Realize+: Agentic Layer</span></div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num">Up to 2.4<span>×</span></div>
+          <div class="kpi-label">Conversion Efficiency</div>
+          <div class="kpi-sub">
+            Reported early efficiency gains in Taboola's Realize ID launch release.
+            <div style="margin-top: 6px;"><span style="font-size: 11px; font-weight: 700; color: var(--taboola-blue); background: #e0edff; padding: 2px 6px; border-radius: 4px;">Intent Resolution</span></div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num">Pre-Bid</div>
+          <div class="kpi-label">Brand-Safety Controls</div>
+          <div class="kpi-sub">
+            Suitability verification via IAS, DoubleVerify, NewsGuard, and TAG.
+            <div style="margin-top: 6px;"><span style="font-size: 11px; font-weight: 700; color: #16a34a; background: #dcfce7; padding: 2px 6px; border-radius: 4px;">Enterprise Safety</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single Purpose Focused Workbench Hero -->
+      <div id="workbench" class="workbench-container">
+        <div class="workbench-header">
+          <div class="workbench-branding">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <span class="workbench-title-tag">ADVERTISER WORKFLOW // AUTONOMOUS REALLOCATION ENGINE</span>
+            <span class="workbench-disclaimer">(Illustrative PMM concept using publicly described Taboola capabilities)</span>
+          </div>
+          <div class="live-optimizer-badge">
+            <span class="pulse-dot"></span>
+            Real-Time Allocation Model Active
+          </div>
+        </div>
+
+        <div class="workbench-body">
+          <!-- Column 1: Input & Abby GenAI Assistant -->
+          <div class="wb-panel">
+            <div class="panel-heading">
+              <span>Abby GenAI Directive</span>
+              <span class="badge-mini badge-abby">Conversational Copilot</span>
+            </div>
+            
+            <div class="prompt-bubble" id="abbyPromptDisplay">
+              <div class="prompt-label">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                CAMPAIGN CONTEXT
+              </div>
+              <span id="abbyDirectiveText">"Tailor dynamic creative variations and match high-intent editorial inventory across premium news & discovery feeds."</span>
+            </div>
+
+            <div class="wb-control-group">
+              <div class="wb-label">
+                <span class="label-name">Campaign Budget</span>
+                <span class="val" id="budgetValDisplay">$25,000 / day</span>
+              </div>
+              <input type="range" class="wb-slider" id="budgetSlider" min="5000" max="100000" step="5000" value="25000" oninput="updateBudget(this.value)">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2px;">
+                <span style="font-size: 11px; color: #64748b;">$5,000/d</span>
+                <span class="interactive-guide-pill" id="dragGuidePill">Drag slider to shift allocation</span>
+                <span style="font-size: 11px; color: #64748b;">$100,000/d</span>
+              </div>
+            </div>
+
+            <div class="wb-control-group">
+              <div class="wb-label">
+                <span class="label-name">Intent Mapping (Realize ID)</span>
+                <span class="val" id="fidelityValDisplay">High Consideration</span>
+              </div>
+              <input type="range" class="wb-slider" id="fidelitySlider" min="1" max="3" step="1" value="3" oninput="updateFidelity(this.value)">
+            </div>
+
+            <div class="policy-gate-card">
+              <span class="badge-safe">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                Brand-Safety Verification
+              </span>
+              <span>DoubleVerify · IAS · NewsGuard Active</span>
+            </div>
+          </div>
+
+          <!-- Column 2: The Decision Engine & Network Canvas (Dynamically Animated) -->
+          <div class="wb-canvas">
+            <div class="panel-heading">
+              <span>Decision Engine Allocation</span>
+              <span class="badge-mini" style="background: rgba(0, 240, 210, 0.2); color: var(--turquoise); border: 1px solid rgba(0, 240, 210, 0.4);">Dynamic Supply Routing</span>
+            </div>
+
+            <div class="canvas-network-map">
+              <div style="font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Illustrative Publisher & OEM Supply Routing</div>
+              <div class="network-nodes-grid" id="networkNodesContainer">
+                <div class="network-node active-node" id="supplyNode1">
+                  <div class="node-title">
+                    <span style="width: 6px; height: 6px; background: var(--turquoise); border-radius: 50%;"></span>
+                    Yahoo Network
+                  </div>
+                  <div class="node-sub">Reach: Premium News</div>
+                  <div class="node-badge" id="nodeYield1">High Consideration</div>
+                </div>
+                <div class="network-node active-node" id="supplyNode2">
+                  <div class="node-title">
+                    <span style="width: 6px; height: 6px; background: var(--turquoise); border-radius: 50%;"></span>
+                    NBC News / MSNBC
+                  </div>
+                  <div class="node-sub">Reach: Editorial News</div>
+                  <div class="node-badge" id="nodeYield2">Strong Engagement</div>
+                </div>
+                <div class="network-node active-node" id="supplyNode3">
+                  <div class="node-title">
+                    <span style="width: 6px; height: 6px; background: var(--turquoise); border-radius: 50%;"></span>
+                    Samsung OEM News
+                  </div>
+                  <div class="node-sub">Reach: Device Integration</div>
+                  <div class="node-badge" id="nodeYield3">Direct Placement</div>
+                </div>
+                <div class="network-node" id="supplyNode4">
+                  <div class="node-title">
+                    <span style="width: 6px; height: 6px; background: #64748b; border-radius: 50%;"></span>
+                    Condé Nast
+                  </div>
+                  <div class="node-sub">Reach: Lifestyle & Culture</div>
+                  <div class="node-badge" id="nodeYield4">Contextual Match</div>
+                </div>
+                <div class="network-node" id="supplyNode5">
+                  <div class="node-title">
+                    <span style="width: 6px; height: 6px; background: #64748b; border-radius: 50%;"></span>
+                    Fox Sports / ESPN
+                  </div>
+                  <div class="node-sub">Reach: Sports & Live Events</div>
+                  <div class="node-badge" id="nodeYield5">High Volume</div>
+                </div>
+                <div class="network-node active-node" id="supplyNode6">
+                  <div class="node-title">
+                    <span style="width: 6px; height: 6px; background: var(--turquoise); border-radius: 50%;"></span>
+                    Xiaomi Newsfeed
+                  </div>
+                  <div class="node-sub">Reach: Device Integration</div>
+                  <div class="node-badge" id="nodeYield6">Direct Placement</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="font-size: 12px; color: #cbd5e1; background: rgba(255,255,255,0.04); padding: 9px 12px; border-radius: 6px; border-left: 3px solid var(--turquoise);">
+              <strong>Mechanism:</strong> Decision Engine directs spend toward higher-performing publisher nodes and creative variants in real time.
+            </div>
+          </div>
+
+          <!-- Column 3: Outcome Layer -->
+          <div class="wb-panel wb-telemetry">
+            <div class="panel-heading">
+              <span>Outcome Layer & Signals</span>
+              <span class="badge-mini" style="background: rgba(0, 86, 240, 0.3); color: var(--light-blue);">PMM Model</span>
+            </div>
+
+            <div class="telemetry-card">
+              <div class="telemetry-val">
+                <span>Performance Signal</span>
+                <span class="pill">CPA / ROAS</span>
+              </div>
+              <div class="telemetry-desc" id="telemetrySignalDesc">
+                Algorithms optimize toward customer target acquisition cost by shifting budget across inventory.
+              </div>
+            </div>
+
+            <div class="telemetry-card">
+              <div class="telemetry-val">
+                <span>Budget Shift Layer</span>
+                <span class="pill" id="budgetShiftStatus">Active: 4 Nodes</span>
+              </div>
+              <div class="telemetry-desc">
+                Budget Allocator rebalances funds in real time toward the highest-performing opportunities.
+              </div>
+            </div>
+
+            <div class="telemetry-card">
+              <div class="telemetry-val">
+                <span>Creation Latency</span>
+                <span class="pill">75% Faster</span>
+              </div>
+              <div class="telemetry-desc">
+                Abby natural language setup replaces multi-step manual creative variation building.
+              </div>
+            </div>
+
+            <div style="margin-top: auto; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 11.5px; color: #94a3b8; text-align: center;">
+              Illustrative advertiser product flow concept
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: The Three Core Product Domains -->
+  <section id="domains" class="section-wrap">
+    <div class="container">
+      <span class="section-pill">Domain Alignment</span>
+      <h2 class="section-title">Mapping the 3 Product Domains to Sales Enablement</h2>
+      <p class="section-desc">
+        A structured breakdown connecting what advertisers care about, the core product marketing message, and the concrete collateral sales and account teams need.
+      </p>
+
+      <div class="grid-3">
+        <!-- Domain 1: Platform Experience -->
+        <div class="domain-card">
+          <div class="domain-header">
+            <span class="domain-tag" style="color: var(--taboola-blue);">01 Platform Experience</span>
+            <div class="domain-title">Realize, Abby GenAI & Campaign Workflow</div>
+          </div>
+          <div class="domain-step">
+            <div class="domain-step-label">What Advertisers Care About:</div>
+            <div class="domain-step-content">Campaign setup friction, media buyer creative fatigue, and manual bidding overhead.</div>
+          </div>
+          <div class="domain-step">
+            <div class="domain-step-label">Core PMM Message:</div>
+            <div class="domain-step-content">Realize functions as a performance platform where Abby and automated allocation reduce manual campaign overhead.</div>
+          </div>
+          <div class="domain-step">
+            <div class="domain-step-label">Sales Enablement Asset:</div>
+            <div class="domain-step-content"><strong>Abby Conversational Demo Script & 1-Pager:</strong> Showing media planners how campaigns launch 75% faster via natural language prompts.</div>
+          </div>
+        </div>
+
+        <!-- Domain 2: Supply Ecosystem -->
+        <div class="domain-card">
+          <div class="domain-header">
+            <span class="domain-tag" style="color: #9333ea;">02 Supply</span>
+            <div class="domain-title">Publishers, Yahoo & OEM Device Reach</div>
+          </div>
+          <div class="domain-step">
+            <div class="domain-step-label">What Advertisers Care About:</div>
+            <div class="domain-step-content">Reaching net-new audiences outside saturated social feeds on trusted, high-attention editorial environments.</div>
+          </div>
+          <div class="domain-step">
+            <div class="domain-step-label">Core PMM Message:</div>
+            <div class="domain-step-content">Direct access to 600M daily active users across exclusive publishers (Yahoo, NBCU, Condé Nast) and OEM device feeds (Samsung, Xiaomi).</div>
+          </div>
+          <div class="domain-step">
+            <div class="domain-step-label">Sales Enablement Asset:</div>
+            <div class="domain-step-content"><strong>Open-Web Reach vs Social Satiation Playbook:</strong> Equipping sales with comparison charts highlighting audience overlap and discovery intent.</div>
+          </div>
+        </div>
+
+        <!-- Domain 3: Content Review & Brand Safety -->
+        <div class="domain-card">
+          <div class="domain-header">
+            <span class="domain-tag" style="color: #16a34a;">03 Content Review & Brand Safety</span>
+            <div class="domain-title">Suitability, Compliance & Review Workflows</div>
+          </div>
+          <div class="domain-step">
+            <div class="domain-step-label">What Advertisers Care About:</div>
+            <div class="domain-step-content">Brand safety risk, editorial suitability, and unpredictable ad approval turnaround times.</div>
+          </div>
+          <div class="domain-step">
+            <div class="domain-step-label">Core PMM Message:</div>
+            <div class="domain-step-content">Transparent pre-bid suitability controls and automated policy verification protecting enterprise brand integrity.</div>
+          </div>
+          <div class="domain-step">
+            <div class="domain-step-label">Sales Enablement Asset:</div>
+            <div class="domain-step-content"><strong>Enterprise Brand Safety Fact Sheet:</strong> Documenting integrations with IAS, DoubleVerify, NewsGuard, and TAG to ease procurement review.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Narrative Positioning & Messaging Diff -->
+  <section id="positioning" class="section-wrap" style="background: #ffffff;">
+    <div class="container">
+      <span class="section-pill">Narrative Shift</span>
+      <h2 class="section-title">The Commercial Narrative Pivot: From Native Ads to Open-Web Performance</h2>
+      <p class="section-desc">
+        Reframing the advertiser mental model from legacy recommendation placements to Taboola Realize as a core performance channel beyond search and social.
+      </p>
+
+      <div class="diff-container">
+        <div class="diff-nav">
+          <button class="diff-nav-btn active" onclick="switchDiff(0)">1. Category Definition</button>
+          <button class="diff-nav-btn" onclick="switchDiff(1)">2. Creative Production (Abby GenAI)</button>
+          <button class="diff-nav-btn" onclick="switchDiff(2)">3. Audience & Intent (Realize ID)</button>
+        </div>
+
+        <!-- Diff Pane 0: Clean Executive Pivot -->
+        <div class="diff-pane active" id="diffPane0">
+          <div class="diff-split">
+            <div class="diff-box diff-box-legacy">
+              <span class="diff-header-pill diff-pill-legacy">Legacy Perception</span>
+              <div class="diff-headline">"Taboola is primarily associated with native recommendation placements on publisher pages."</div>
+              <div class="diff-body">
+                Historically recognized for native recommendation feeds on content pages rather than as an outcome-driven performance marketing platform.
+              </div>
+              <div class="diff-rationale">
+                <strong>Opportunity:</strong> Expand the mental model from native placements to measurable performance across the open web.
+              </div>
+            </div>
+            <div class="diff-box diff-box-modern">
+              <span class="diff-header-pill diff-pill-modern">New Advertiser Proposition</span>
+              <div class="diff-headline">"Realize gives performance marketers another place to capture demand beyond search and social."</div>
+              <div class="diff-body">
+                Positions Realize as a dedicated performance platform delivering measurable outcomes at scale, powered by Taboola's exclusive supply, first-party intent data, and AI-driven optimization.
+              </div>
+              <div class="diff-rationale">
+                <strong>Commercial Value:</strong> Anchors the conversation on business outcomes (CPA, ROAS, purchases, leads) rather than placement format.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diff Pane 1 -->
+        <div class="diff-pane" id="diffPane1">
+          <div class="diff-split">
+            <div class="diff-box diff-box-legacy">
+              <span class="diff-header-pill diff-pill-legacy">Legacy Perception</span>
+              <div class="diff-headline">"Use an AI headline generator to write extra copy variants."</div>
+              <div class="diff-body">
+                Treats AI as an incremental feature bolted onto campaign creation, leaving media buyers to manually assemble and test combinations.
+              </div>
+              <div class="diff-rationale">
+                <strong>Opportunity:</strong> Transition from incremental copy assistance to conversational campaign building.
+              </div>
+            </div>
+            <div class="diff-box diff-box-modern">
+              <span class="diff-header-pill diff-pill-modern">New Advertiser Proposition</span>
+              <div class="diff-headline">"Talk to Abby: Conversational campaign creation that launches 75% faster."</div>
+              <div class="diff-body">
+                Frames Abby as a generative AI assistant that builds and refines campaigns using natural language: generating headlines, adapting image assets, and structuring targeting with minimal manual effort.
+              </div>
+              <div class="diff-rationale">
+                <strong>Commercial Value:</strong> Lowers time-to-value for agencies and advertisers, significantly accelerating initial campaign setup.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diff Pane 2 -->
+        <div class="diff-pane" id="diffPane2">
+          <div class="diff-split">
+            <div class="diff-box diff-box-legacy">
+              <span class="diff-header-pill diff-pill-legacy">Legacy Perception</span>
+              <div class="diff-headline">"Target audiences through standard contextual and demographic categories."</div>
+              <div class="diff-body">
+                Relies on broad audience buckets that do not directly address advertiser questions around signal fragmentation across digital touchpoints.
+              </div>
+              <div class="diff-rationale">
+                <strong>Opportunity:</strong> Map fragmented reading behavior into unified, high-intent audience segments.
+              </div>
+            </div>
+            <div class="diff-box diff-box-modern">
+              <span class="diff-header-pill diff-pill-modern">New Advertiser Proposition</span>
+              <div class="diff-headline">"Realize ID: Unifying fragmented open-web intent into higher-converting audiences."</div>
+              <div class="diff-body">
+                Positions Realize ID as a unified identity solution connecting consumer reading signals across 600M daily active users to identify purchase intent, delivering up to 2.4× conversion efficiency gains in early benchmarks.
+              </div>
+              <div class="diff-rationale">
+                <strong>Commercial Value:</strong> Solves signal fragmentation by providing actionable, persistent intent mapping across the open web.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Objection Battlecards & Sales Enablement -->
+  <section id="objections" class="section-wrap">
+    <div class="container">
+      <span class="section-pill">Sales Enablement</span>
+      <h2 class="section-title">Sales Enablement Playbook: Core Advertiser Objection Battlecards</h2>
+      <p class="section-desc">
+        A practical Concede &rarr; Reframe &rarr; Proof framework for sales representatives handling competitive and brand perception objections in the field.
+      </p>
+
+      <!-- Objection 1 -->
+      <div class="battlecard-item open">
+        <div class="battlecard-header" onclick="toggleBattlecard(this)">
+          <div class="battlecard-query">
+            <span class="card-tag tag-blue" style="margin: 0; background: #e0edff; color: var(--taboola-blue); padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">Objection 01</span>
+            "We already spend most of our budget on Google Search and Meta; why add Taboola?"
+          </div>
+          <div class="battlecard-chevron">&#9662;</div>
+        </div>
+        <div class="battlecard-content">
+          <div class="playbook-steps">
+            <div class="playbook-step">
+              <span class="step-tag tag-concede">1. Concede</span>
+              <p class="step-body">
+                "Search and social are essential for capturing existing intent and engaging users inside social feeds."
+              </p>
+            </div>
+            <div class="playbook-step">
+              <span class="step-tag tag-reframe">2. Reframe</span>
+              <p class="step-body">
+                "However, auction costs on walled gardens continue to rise as feed inventory saturates. Taboola reaches 600M consumers across premium publishers like Yahoo and NBC News during discovery mode, before they search."
+              </p>
+            </div>
+            <div class="playbook-step">
+              <span class="step-tag tag-proof">3. Proof</span>
+              <p class="step-body">
+                "Deploy a vertical-specific advertiser case study demonstrating incremental conversions, efficient CPA, or lower blended acquisition cost compared to the advertiser's existing social channel mix."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Objection 2 -->
+      <div class="battlecard-item">
+        <div class="battlecard-header" onclick="toggleBattlecard(this)">
+          <div class="battlecard-query">
+            <span class="card-tag tag-blue" style="margin: 0; background: #e0edff; color: var(--taboola-blue); padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">Objection 02</span>
+            "Is our brand safe running in native open-web placements?"
+          </div>
+          <div class="battlecard-chevron">&#9662;</div>
+        </div>
+        <div class="battlecard-content">
+          <div class="playbook-steps">
+            <div class="playbook-step">
+              <span class="step-tag tag-concede">1. Concede</span>
+              <p class="step-body">
+                "Brand suitability is a valid concern for any media buyer evaluating inventory beyond closed platform walls."
+              </p>
+            </div>
+            <div class="playbook-step">
+              <span class="step-tag tag-reframe">2. Reframe</span>
+              <p class="step-body">
+                "Taboola operates dedicated content review teams and AI policy checks, backed by pre-bid suitability integrations with DoubleVerify, Integral Ad Science, and NewsGuard."
+              </p>
+            </div>
+            <div class="playbook-step">
+              <span class="step-tag tag-proof">3. Proof</span>
+              <p class="step-body">
+                "Walk through Taboola's pre-bid verification setup in the dashboard and share the enterprise brand safety technical sheet showing partner accreditation (TAG Certified Against Fraud)."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Objection 3 -->
+      <div class="battlecard-item">
+        <div class="battlecard-header" onclick="toggleBattlecard(this)">
+          <div class="battlecard-query">
+            <span class="card-tag tag-blue" style="margin: 0; background: #e0edff; color: var(--taboola-blue); padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">Objection 03</span>
+            "Our team doesn't have the creative resources to design native-specific creatives."
+          </div>
+          <div class="battlecard-chevron">&#9662;</div>
+        </div>
+        <div class="battlecard-content">
+          <div class="playbook-steps">
+            <div class="playbook-step">
+              <span class="step-tag tag-concede">1. Concede</span>
+              <p class="step-body">
+                "Custom creative production across multiple sizes and editorial formats can be a major agency and team bottleneck."
+              </p>
+            </div>
+            <div class="playbook-step">
+              <span class="step-tag tag-reframe">2. Reframe</span>
+              <p class="step-body">
+                "With Abby GenAI, creative production is conversational. You provide existing URLs or assets, and Abby generates headlines, modifies image backgrounds, and refines CTAs to fit publisher contexts."
+              </p>
+            </div>
+            <div class="playbook-step">
+              <span class="step-tag tag-proof">3. Proof</span>
+              <p class="step-body">
+                "Demonstrate the Abby live interface in a 3-minute screen share showing campaigns going live up to 75% faster, reducing manual setup and creative production overhead."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supporting Evidence Tier -->
+  <section id="evidence" class="evidence-section">
+    <div class="container">
+      <div style="margin-bottom: 24px;">
+        <span class="section-pill" style="background: rgba(0, 40, 82, 0.08); color: var(--dark-navy);">Operational Support</span>
+        <h3 style="font-size: 22px; font-weight: 800; color: var(--dark-navy); margin-bottom: 6px;">Execution Evidence & Baseline Transparency</h3>
+        <p style="font-size: 14px; color: var(--text-muted); max-width: 780px;">
+          Supporting operational artifacts demonstrating practical execution milestones, relevant past work, and research integrity.
+        </p>
+      </div>
+
+      <!-- 30-60-90 Day GTM Execution Plan -->
+      <div style="margin-bottom: 36px;">
+        <h4 style="font-size: 16px; font-weight: 700; color: var(--dark-navy); margin-bottom: 12px;">First 90 Days: Core PMM Milestones</h4>
+        <div class="roadmap-timeline">
+          <!-- 30 Days -->
+          <div class="roadmap-column">
+            <div class="roadmap-col-header">
+              <span class="roadmap-days">Days 01 - 30</span>
+              <span style="font-size: 11.5px; font-weight: 700; color: var(--taboola-blue); background: #e0edff; padding: 2px 8px; border-radius: 4px;">Listen & Audit</span>
+            </div>
+            <div class="roadmap-focus">Identify Sales Objections & Map Collateral</div>
+            <ul class="roadmap-deliverables">
+              <li class="deliverable-item">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span><strong>Audit Collateral:</strong> Map sales decks and 1-pagers for messaging gaps and outdated references.</span>
+              </li>
+              <li class="deliverable-item">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span><strong>Shadow Sales & AMs:</strong> Join discovery calls to surface highest-frequency advertiser objections.</span>
+              </li>
+              <li class="deliverable-item">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span><strong>Rank Asset Needs:</strong> Prioritize top 3 collateral blockers directly affecting rep conversations.</span>
+              </li>
+            </ul>
+            <div class="roadmap-metric">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              Milestone: Verified baseline of top 5 sales objections
+            </div>
+          </div>
+
+          <!-- 60 Days -->
+          <div class="roadmap-column">
+            <div class="roadmap-col-header">
+              <span class="roadmap-days">Days 31 - 60</span>
+              <span style="font-size: 11.5px; font-weight: 700; color: #9333ea; background: #f3e8ff; padding: 2px 8px; border-radius: 4px;">Launch & Enable</span>
+            </div>
+            <div class="roadmap-focus">Deploy Core Playbooks & AI Workflows</div>
+            <ul class="roadmap-deliverables">
+              <li class="deliverable-item">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span><strong>Deploy Battlecards:</strong> Ship search/social reframing and brand safety objection cards.</span>
+              </li>
+              <li class="deliverable-item">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span><strong>Pilot AI Automation:</strong> Implement AI tooling to draft, summarize, and keep enablement synced.</span>
+              </li>
+              <li class="deliverable-item">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span><strong>Sales Training Series:</strong> Run practical sessions on buyer personas and live Abby demo flows.</span>
+              </li>
+            </ul>
+            <div class="roadmap-metric">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              Milestone: Core battlecard suite tested with pilot teams
+            </div>
+          </div>
+
+          <!-- 90 Days -->
+          <div class="roadmap-column">
+            <div class="roadmap-col-header">
+              <span class="roadmap-days">Days 61 - 90</span>
+              <span style="font-size: 11.5px; font-weight: 700; color: #16a34a; background: #dcfce7; padding: 2px 8px; border-radius: 4px;">Measure & Feedback</span>
+            </div>
+            <div class="roadmap-focus">Measure Adoption & Establish VOC Loop</div>
+            <ul class="roadmap-deliverables">
+              <li class="deliverable-item">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span><strong>Track Rep Adoption:</strong> Review collateral usage and collect qualitative feedback on effectiveness.</span>
+              </li>
+              <li class="deliverable-item">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span><strong>Establish VOC Cadence:</strong> Synthesize customer friction points from AMs directly into Product Leads.</span>
+              </li>
+              <li class="deliverable-item">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span><strong>Standardize Case Studies:</strong> Build a repeatable template for sales to package customer wins.</span>
+              </li>
+            </ul>
+            <div class="roadmap-metric">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              Milestone: VOC synthesis delivered to Product leads
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Relevant PMM Work -->
+      <div style="margin-bottom: 36px;">
+        <h4 style="font-size: 16px; font-weight: 700; color: var(--dark-navy); margin-bottom: 12px;">Relevant PMM Work</h4>
+        <div class="case-studies-grid">
+          <div class="case-study-card">
+            <div>
+              <div class="case-company">Osmos.ai</div>
+              <div class="case-domain">Performance Marketing · AI Platforms</div>
+              <p class="case-problem" style="margin-top: 8px;">
+                Engineered positioning for retail media ad platforms, replacing manual bid management with machine learning algorithms.
+              </p>
+            </div>
+            <a href="https://bhanuexcalibur.github.io/Osmos/" target="_blank" rel="noopener" class="case-link">
+              View Strategic PoW
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+
+          <div class="case-study-card">
+            <div>
+              <div class="case-company">Qoruz</div>
+              <div class="case-domain">Campaign Workflows · Sales Enablement</div>
+              <p class="case-problem" style="margin-top: 8px;">
+                Architected campaign execution blueprints and sales enablement playbooks for performance-driven media teams.
+              </p>
+            </div>
+            <a href="https://bhanuexcalibur.github.io/Qoruz/" target="_blank" rel="noopener" class="case-link">
+              View Strategic PoW
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+
+          <div class="case-study-card">
+            <div>
+              <div class="case-company">SquadStack</div>
+              <div class="case-domain">Sales Playbooks · Lead Fulfillment</div>
+              <p class="case-problem" style="margin-top: 8px;">
+                Designed sales channel playbooks, conversion telemetry concepts, and objection reframing for commercial teams.
+              </p>
+            </div>
+            <a href="https://bhanuexcalibur.github.io/SquadStack/" target="_blank" rel="noopener" class="case-link">
+              View Strategic PoW
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research Baseline & PMM Observations -->
+      <div>
+        <h4 style="font-size: 16px; font-weight: 700; color: var(--dark-navy); margin-bottom: 12px;">Research Baseline & PMM Observations</h4>
+        <div class="audit-grid">
+          <div>
+            <h5 style="font-size: 14.5px; font-weight: 700; color: var(--dark-navy); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+              <svg width="16" height="16" fill="none" stroke="#16a34a" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              Verified Public Information
+            </h5>
+            <ul class="audit-list">
+              <li><strong>Scale:</strong> Approximately 600M daily active users reached across publisher and OEM partner networks.</li>
+              <li><strong>Core Platforms:</strong> Realize (performance ad platform) and Realize+ (agentic layer featuring the Decision Engine, Budget Allocator, and Element Generator), supported by Abby GenAI.</li>
+              <li><strong>Recent Launch:</strong> Realize ID launched September 22, 2026 as a unified identity offering with up to 2.4× early conversion-efficiency gains reported in official release.</li>
+              <li><strong>Key Partners:</strong> Yahoo, NBC News, Fox Sports, ESPN, Condé Nast, Samsung, Xiaomi.</li>
+              <li><strong>Safety Standards:</strong> Integrations with IAS, DoubleVerify, TAG, and NewsGuard for pre-bid verification.</li>
+              <li><strong>Setup Efficiency:</strong> Taboola reports campaigns with Abby launch approximately 75% faster than manual setup.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 style="font-size: 14.5px; font-weight: 700; color: var(--dark-navy); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+              <svg width="16" height="16" fill="none" stroke="#0284c7" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              PMM Hypotheses & Inferences
+            </h5>
+            <ul class="audit-list">
+              <li><strong>Enablement Need:</strong> Rapid releases of agentic features (Abby, Claude integration) likely create collateral freshness challenges for field sales teams.</li>
+              <li><strong>Objection Friction:</strong> Advertisers evaluating native channels frequently question brand safety upfront, making pre-bid proof a top-of-funnel requirement.</li>
+              <li><strong>Walled Garden Shift:</strong> The strongest narrative angle for budget expansion is positioning Realize alongside search and social rather than arguing for total displacement.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Full Contact Trinity -->
+  <footer class="site-footer" id="connect">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-title">Let's Connect on Product Marketing at Taboola</div>
+          <div class="footer-sub">Bhanu Kumar &middot; Product Marketing &middot; Translating Ad-Tech into Commercial Impact</div>
+        </div>
+        <div class="footer-trinity" id="targetTrinity">
+          <a href="https://www.linkedin.com/in/bhanuexcalibur/" target="_blank" rel="noopener" class="btn-contact btn-contact-outline">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:bhanukumar0902@gmail.com" class="btn-contact btn-contact-outline">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Email
+          </a>
+          <a href="https://drive.google.com/file/d/1a_WRIHF7RawD7rXkwYs3DNuPQf7zq_lf/view?usp=sharing" target="_blank" rel="noopener" class="btn-contact btn-contact-solid">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Resume
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>Taboola × Bhanu Kumar &middot; Independent Product Marketing Blueprint</div>
+        <div>Hosted on GitHub Pages</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Interactions & Dynamic Allocation Engine -->
+  <script>
+    // Publisher node configurations based on budget level
+    const nodeConfigs = [
+      { id: 'supplyNode1', name: 'Yahoo Network', threshold: 5000, reach: 'Premium News' },
+      { id: 'supplyNode2', name: 'NBC News / MSNBC', threshold: 10000, reach: 'Editorial News' },
+      { id: 'supplyNode3', name: 'Samsung OEM News', threshold: 20000, reach: 'Device Integration' },
+      { id: 'supplyNode6', name: 'Xiaomi Newsfeed', threshold: 35000, reach: 'Device Integration' },
+      { id: 'supplyNode4', name: 'Condé Nast', threshold: 55000, reach: 'Lifestyle & Culture' },
+      { id: 'supplyNode5', name: 'Fox Sports / ESPN', threshold: 75000, reach: 'Sports & Live Events' }
+    ];
+
+    function updateBudget(val) {
+      const numVal = parseInt(val, 10);
+      const formatted = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(numVal);
+      document.getElementById('budgetValDisplay').innerText = `${formatted} / day`;
+
+      // Dynamically activate/deactivate supply nodes
+      let activeCount = 0;
+      nodeConfigs.forEach(node => {
+        const el = document.getElementById(node.id);
+        if (!el) return;
+        const dot = el.querySelector('.node-title span');
+        const badge = el.querySelector('.node-badge');
+
+        if (numVal >= node.threshold) {
+          activeCount++;
+          if (!el.classList.contains('active-node')) {
+            el.classList.add('active-node', 'ripple-active');
+            setTimeout(() => el.classList.remove('ripple-active'), 800);
+          }
+          if (dot) dot.style.background = 'var(--turquoise)';
+          if (badge) {
+            badge.style.color = 'var(--turquoise)';
+            badge.innerText = 'Routing Active';
+          }
+        } else {
+          el.classList.remove('active-node');
+          if (dot) dot.style.background = '#64748b';
+          if (badge) {
+            badge.style.color = '#64748b';
+            badge.innerText = 'Queued';
+          }
+        }
+      });
+
+      // Update Shift Status pill
+      const shiftPill = document.getElementById('budgetShiftStatus');
+      if (shiftPill) {
+        shiftPill.innerText = `Active: ${activeCount} Nodes`;
+      }
+    }
+
+    function updateFidelity(val) {
+      const labels = {
+        '1': 'Broad Reach',
+        '2': 'Category Intent',
+        '3': 'High Consideration'
+      };
+      document.getElementById('fidelityValDisplay').innerText = labels[val] || 'High Consideration';
+    }
+
+    function switchDiff(index) {
+      const buttons = document.querySelectorAll('.diff-nav-btn');
+      const panes = document.querySelectorAll('.diff-pane');
+
+      buttons.forEach((btn, i) => {
+        btn.classList.toggle('active', i === index);
+      });
+
+      panes.forEach((pane, i) => {
+        pane.classList.toggle('active', i === index);
+      });
+    }
+
+    function toggleBattlecard(headerEl) {
+      const item = headerEl.parentElement;
+      item.classList.toggle('open');
+    }
+
+    function handleConnectClick() {
+      const connectSection = document.getElementById('connect');
+      const trinityEl = document.getElementById('targetTrinity');
+
+      if (connectSection) {
+        connectSection.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      if (trinityEl) {
+        setTimeout(() => {
+          trinityEl.classList.remove('highlight-pulse');
+          void trinityEl.offsetWidth; // Force reflow
+          trinityEl.classList.add('highlight-pulse');
+        }, 350);
+      }
+    }
+
+    // Scroll-Triggered Animation: Fires ONLY when user genuinely scrolls the workbench fully into view
+    document.addEventListener('DOMContentLoaded', () => {
+      const workbenchEl = document.getElementById('workbench');
+      let hasAnimated = false;
+      let userHasScrolled = false;
+
+      // Track if the user has physically scrolled
+      window.addEventListener('scroll', () => {
+        userHasScrolled = true;
+      }, { passive: true });
+
+      if ('IntersectionObserver' in window && workbenchEl) {
+        // High threshold: requires at least 65% of the workbench to be fully inside the viewport
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            // Must be intersecting at >= 65% AND user must have scrolled down
+            if (entry.isIntersecting && !hasAnimated && (userHasScrolled || window.scrollY > 150)) {
+              hasAnimated = true;
+              obs.unobserve(workbenchEl);
+              setTimeout(runScrollDemo, 350);
+            }
+          });
+        }, { threshold: 0.65 });
+
+        observer.observe(workbenchEl);
+
+        // Also check on scroll directly in case threshold is tricky on smaller laptop viewports
+        window.addEventListener('scroll', () => {
+          if (!hasAnimated && workbenchEl) {
+            const rect = workbenchEl.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            // The middle of the workbench is clearly within the viewport
+            if (rect.top <= windowHeight * 0.45 && rect.bottom >= windowHeight * 0.3) {
+              hasAnimated = true;
+              observer.unobserve(workbenchEl);
+              setTimeout(runScrollDemo, 350);
+            }
+          }
+        }, { passive: true });
+      }
+
+      function runScrollDemo() {
+        const budgetSlider = document.getElementById('budgetSlider');
+        const guidePill = document.getElementById('dragGuidePill');
+        if (!budgetSlider) return;
+
+        // Visual guide pulse
+        if (guidePill) {
+          guidePill.style.transition = 'all 0.3s ease';
+          guidePill.style.transform = 'scale(1.08)';
+          guidePill.style.background = 'rgba(0, 240, 210, 0.25)';
+          budgetSlider.classList.add('highlight-slider');
+        }
+
+        // Live sweep animation: moves from $25,000 up to $75,000 activating Condé Nast & Fox Sports
+        let currentVal = 25000;
+        let targetVal = 75000;
+        let step = 5000;
+        
+        let interval = setInterval(() => {
+          if (currentVal < targetVal) {
+            currentVal += step;
+            budgetSlider.value = currentVal;
+            updateBudget(currentVal);
+          } else {
+            clearInterval(interval);
+            setTimeout(() => {
+              if (guidePill) {
+                guidePill.style.transform = 'scale(1)';
+                guidePill.style.background = 'rgba(0, 240, 210, 0.12)';
+              }
+              budgetSlider.classList.remove('highlight-slider');
+            }, 800);
+          }
+        }, 120);
+      }
+    });
+  </script>
+</body>
+</html>
